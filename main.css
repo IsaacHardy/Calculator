@@ -12,6 +12,14 @@ button:hover {
   background-color: #83C178;
 }
 
+button:focus {
+  outline: none;
+}
+
+button:active {
+  box-shadow: 1px;
+}
+
 .output {
   height: 68px;
   width: 208px;
