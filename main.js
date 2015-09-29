@@ -32,18 +32,22 @@ var secondInput;
 plusBtn.addEventListener('click', function () {
   firstInput = outputArea.textContent;
   outputArea.textContent = null;
+  operatorSelector = '+';
 });
 minusBtn.addEventListener('click', function () {
   firstInput = outputArea.textContent;
   outputArea.textContent = null;
+  operatorSelector = '-';
 });
 divideBtn.addEventListener('click', function () {
   firstInput = outputArea.textContent;
   outputArea.textContent = null;
+  operatorSelector = '/';
 });
 multiplyBtn.addEventListener('click', function () {
   firstInput = outputArea.textContent;
   outputArea.textContent = null;
+  operatorSelector = '*';
 });
 
 // Button Event Listeners
@@ -79,17 +83,26 @@ zeroBtn.addEventListener('click', function () {
 });
 
 // Clear Button
-// var clearBtn;
+clearBtn.addEventListener('click', function () {
+  outputArea.textContent = null;
+  firstInput = null;
+  secondInput = null;
+})
 
-// clearBtn.addEventListener('click', function () {
-
-// })
+// Period Button
+periodBtn.addEventListener('click', function () {
+  outputArea.textContent = outputArea.textContent + '.';
+});
 
 
 // Equals Listener
-// equalsBtn.addEventListener('click', function () {
-//   var calculate = Number(firstInput.value) + Number(secondInput.value);
-//   outputArea.textContent = calculate;
-// });
+var operatorSelector;
+
+equalsBtn.addEventListener('click', function () {
+  secondInput = outputArea.textContent;
+  // var string = firstInput + operatorSelector + secondInput;
+  var calculate = Number(firstInput.value) + operatorSelector + Number(secondInput.value);
+  outputArea.textContent = calculate;
+});
 
 
