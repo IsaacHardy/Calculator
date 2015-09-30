@@ -1,6 +1,6 @@
 // Variable Declaration for buttons
 var clearBtn = document.querySelector('#clear');
-var outputArea = document.querySelector('#outputText')
+var outputArea = document.querySelector('#outputText');
 
 var sevenBtn = document.querySelector('#seven');
 var eightBtn = document.querySelector('#eight');
@@ -24,7 +24,7 @@ var plusBtn = document.querySelector('#plus');
 
 // Input Functions
 var firstInput;
-
+var operatorSelector;
 var secondInput;
 
 
@@ -33,21 +33,29 @@ plusBtn.addEventListener('click', function () {
   firstInput = outputArea.textContent;
   outputArea.textContent = null;
   operatorSelector = '+';
+  console.log(firstInput);
+  console.log(operatorSelector);
 });
 minusBtn.addEventListener('click', function () {
   firstInput = outputArea.textContent;
   outputArea.textContent = null;
   operatorSelector = '-';
+  console.log(firstInput);
+  console.log(operatorSelector);
 });
 divideBtn.addEventListener('click', function () {
   firstInput = outputArea.textContent;
   outputArea.textContent = null;
   operatorSelector = '/';
+  console.log(firstInput);
+  console.log(operatorSelector);
 });
 multiplyBtn.addEventListener('click', function () {
   firstInput = outputArea.textContent;
   outputArea.textContent = null;
   operatorSelector = '*';
+  console.log(firstInput);
+  console.log(operatorSelector);
 });
 
 // Button Event Listeners
@@ -87,7 +95,10 @@ clearBtn.addEventListener('click', function () {
   outputArea.textContent = null;
   firstInput = null;
   secondInput = null;
-})
+  console.log(firstInput);
+  console.log(secondInput);
+  console.log(operatorSelector);
+});
 
 // Period Button
 periodBtn.addEventListener('click', function () {
@@ -96,14 +107,30 @@ periodBtn.addEventListener('click', function () {
 
 
 // Equals Listener
-var operatorSelector;
-
-
 equalsBtn.addEventListener('click', function () {
   secondInput = outputArea.textContent;
-  var calculate = Number(firstInput.value) + Number(secondInput.value);
-  outputArea.textContent = calculate;
+  outputArea.textContent = null;
+  if (operatorSelector === '+') {
+  var calc = Number(firstInput) + Number(secondInput);
+  outputArea.textContent = calc;
+  }
+  else if (operatorSelector === '-') { 
+  var calc = Number(firstInput) - Number(secondInput);
+  outputArea.textContent = calc;
+  }
+  else if (operatorSelector === '/') { 
+  var calc = Number(firstInput) / Number(secondInput);
+  outputArea.textContent = calc;
+  }
+  else  { 
+  var calc = Number(firstInput) * Number(secondInput);
+  outputArea.textContent = calc;
+  }
 });
+
+
+
+
 
 
 
