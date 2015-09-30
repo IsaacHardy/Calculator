@@ -98,11 +98,12 @@ periodBtn.addEventListener('click', function () {
 // Equals Listener
 var operatorSelector;
 
+
 equalsBtn.addEventListener('click', function () {
   secondInput = outputArea.textContent;
-  // var string = firstInput + operatorSelector + secondInput;
-  var calculate = Number(firstInput.value) + operatorSelector + Number(secondInput.value);
+  var calculate = Number(firstInput.value) + Number(secondInput.value);
   outputArea.textContent = calculate;
 });
+
 
 
