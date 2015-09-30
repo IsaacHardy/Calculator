@@ -33,29 +33,21 @@ plusBtn.addEventListener('click', function () {
   firstInput = outputArea.textContent;
   outputArea.textContent = null;
   operatorSelector = '+';
-  console.log(firstInput);
-  console.log(operatorSelector);
 });
 minusBtn.addEventListener('click', function () {
   firstInput = outputArea.textContent;
   outputArea.textContent = null;
   operatorSelector = '-';
-  console.log(firstInput);
-  console.log(operatorSelector);
 });
 divideBtn.addEventListener('click', function () {
   firstInput = outputArea.textContent;
   outputArea.textContent = null;
   operatorSelector = '/';
-  console.log(firstInput);
-  console.log(operatorSelector);
 });
 multiplyBtn.addEventListener('click', function () {
   firstInput = outputArea.textContent;
   outputArea.textContent = null;
   operatorSelector = '*';
-  console.log(firstInput);
-  console.log(operatorSelector);
 });
 
 // Button Event Listeners
@@ -95,9 +87,6 @@ clearBtn.addEventListener('click', function () {
   outputArea.textContent = null;
   firstInput = null;
   secondInput = null;
-  console.log(firstInput);
-  console.log(secondInput);
-  console.log(operatorSelector);
 });
 
 // Period Button
